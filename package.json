@@ -1,0 +1,15 @@
+{
+  "name": "corporate-gifts-dashboard",
+  "version": "1.0.0",
+  "description": "WooCommerce Dashboard - MERN Stack",
+  "scripts": {
+    "client": "cd admin && npm run dev",
+    "server": "cd server && npm run dev",
+    "dev": "concurrently \"npm run client\" \"npm run server\"",
+    "build": "cd admin && npm run build",
+    "install:all": "cd admin && npm install && cd ../server && npm install"
+  },
+  "devDependencies": {
+    "concurrently": "^9.0.0"
+  }
+}
