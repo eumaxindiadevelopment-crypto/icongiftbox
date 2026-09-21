@@ -3,7 +3,6 @@ import CommanBanner from "../../components/CommanBanner";
 import IMAGES from "../../constant/theme";
 import PaginationBlog from "../../elements/Shop/PaginationBlog";
 import SelectBoxOne from "../../elements/Shop/SelectBoxOne";
-import SelectBoxTwo from "../../elements/Shop/SelectBoxTwo";
 import ShopSidebar from "../../elements/Shop/ShopSidebar";
 import { TabData } from "./ShopStandard";
 import { shopStyleData } from "../../constant/Alldata";

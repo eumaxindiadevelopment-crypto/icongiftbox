@@ -23,7 +23,7 @@ interface Props {
 const HottestSliderBlog = ({ items }: Props) => {
   const data: SliderItem[] = items?.length
     ? items
-    : HottestSliderBlogData.map((d, i) => ({
+    : HottestSliderBlogData.map((d) => ({
         image: d.image,
         title: d.title,
         saleTitle: 'up to 79% off',

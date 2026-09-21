@@ -7,7 +7,6 @@ import ShopSidebar from "../../elements/Shop/ShopSidebar";
 import { shopStyleData } from "../../constant/Alldata";
 import ShopGridCard from "../../elements/Shop/ShopGridCard";
 import { TabData } from "./ShopStandard";
-import SelectBoxTwo from "../../elements/Shop/SelectBoxTwo";
 import SelectBoxOne from "../../elements/Shop/SelectBoxOne";
 import ShopCategorySlider from "../../elements/Shop/ShopCategorySlider";
 import PaginationBlog from "../../elements/Shop/PaginationBlog";

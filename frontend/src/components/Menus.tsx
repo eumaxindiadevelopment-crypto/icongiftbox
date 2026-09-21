@@ -1,6 +1,6 @@
 ﻿import { Link } from "react-router-dom";
 import { Fragment, useReducer } from "react";
-import { accountMenuItem, CorporateGiftsMenu, menuData4, portfolioMenu, FestiveGiftsMenuItem, EcoFriendlyGiftsMenuItem } from "../constant/Alldata";
+import { CorporateGiftsMenu, menuData4, FestiveGiftsMenuItem, EcoFriendlyGiftsMenuItem } from "../constant/Alldata";
 
 interface reduType{
     type : string;        
@@ -186,7 +186,7 @@ export default function Menus(){
                                             <Link to={item.link} className="menu-title">{item.title}</Link>
                                             <ul>
                                                 {item.subMenu && item.subMenu.map((elem, ind)=>(
-                                                    <li key={ind}><Link to={elem.path}>{elem.name}</Link></li>
+                                                    <li key={ind}><Link to={elem.path || '#'}>{elem.name}</Link></li>
                                                 ))}                                                    
                                             </ul>
                                         </Fragment>

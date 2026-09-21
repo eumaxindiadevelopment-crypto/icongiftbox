@@ -14,7 +14,6 @@ import SponsoredSlider from "../elements/Home/SponsoredSlider";
 import OurClientSlider from "../elements/Home/OurClientSlider";
 import ShortListBlog from "../elements/Home/ShortListBlog";
 import ShortlistBanner from "../elements/Home/ShortlistBanner";
-import TradingSliderBlog from "../elements/Home/TradingSliderBlog";
 import CollectionBlog from "../elements/Home/CollectionBlog";
 import MoreCollectionBlog from "../elements/Home/MoreCollectionBlog";
 import { useState } from "react";

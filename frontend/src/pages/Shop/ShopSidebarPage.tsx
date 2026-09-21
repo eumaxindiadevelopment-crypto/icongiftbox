@@ -4,7 +4,6 @@ import CommanBanner from "../../components/CommanBanner";
 import IMAGES from "../../constant/theme";
 import PaginationBlog from "../../elements/Shop/PaginationBlog";
 import SelectBoxOne from "../../elements/Shop/SelectBoxOne";
-import SelectBoxTwo from "../../elements/Shop/SelectBoxTwo";
 import ShopSidebar from "../../elements/Shop/ShopSidebar";
 import { Link } from "react-router-dom";
 import ShopGridCard from "../../elements/Shop/ShopGridCard";
@@ -51,7 +50,7 @@ export default function ShopSidebarPage(){
 
     const [selectedTags, setSelectedTags] = useState<string[]>([]);
     const [search, setSearch] = useState("");
-    const [priceRange, setPriceRange] = useState<{ min: number; max: number } | null>(null);
+    const [priceRange, setPriceRange] = useState<{ min: number; max: number | null } | null>(null);
     const [selectedColor, setSelectedColor] = useState<string | null>(null);
     const [selectedSize, setSelectedSize] = useState<string | null>(null);
 
@@ -67,7 +66,7 @@ export default function ShopSidebarPage(){
             if (search) params.search = search;
             if (priceRange) {
                 params.minPrice = String(priceRange.min);
-                params.maxPrice = String(priceRange.max);
+                if (priceRange.max !== null) params.maxPrice = String(priceRange.max);
             }
             if (selectedColor) params.color = selectedColor;
             if (selectedSize) params.size = selectedSize;

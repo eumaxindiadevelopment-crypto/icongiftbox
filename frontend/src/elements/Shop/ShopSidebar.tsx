@@ -1,11 +1,10 @@
 import { Fragment, useEffect, useState } from "react";
 import { Link } from "react-router-dom";
-import { fetchCategories, fetchProductAttributes, fetchProductBrands, fetchProductTags } from "../../lib/api";
+import { fetchCategories, fetchProductAttributes, fetchProductBrands } from "../../lib/api";
 import ShopSidebarPriceSlider from "./ShopSidebarPriceSlider";
 import type { CategoryRef } from "../../lib/seoUrl";
 
 type Category = { _id: string; name: string; slug: string; count: number; parent?: { _id: string; name: string; slug: string } | null };
-type Tag = { name: string; count: number };
 type Attribute = { name: string; options: string[] };
 type Brand = { _id: string; name: string; slug: string; count: number };
 
@@ -32,14 +31,14 @@ type Props = {
 
 export default function ShopSidebar({
     selectedCategorySlug = null,
-    selectedTags = [],
+    // selectedTags = [],
     selectedColor = null,
     selectedSize = null,
     selectedMinPrice = null,
     selectedMaxPrice = null,
     selectedBrands = [],
     buildCategoryHref,
-    onTagToggle,
+    // onTagToggle,
     onSearchChange,
     onPriceChange,
     onColorChange,
@@ -47,14 +46,14 @@ export default function ShopSidebar({
     onBrandToggle,
 }: Props){
     const [categories, setCategories] = useState<Category[]>([]);
-    const [tags, setTags] = useState<Tag[]>([]);
+    // const [tags, setTags] = useState<Tag[]>([]);
     const [attributes, setAttributes] = useState<Attribute[]>([]);
     const [brands, setBrands] = useState<Brand[]>([]);
     const [search, setSearch] = useState("");
 
     useEffect(() => {
         fetchCategories().then(setCategories).catch(() => {});
-        fetchProductTags().then(setTags).catch(() => {});
+        // fetchProductTags().then(setTags).catch(() => {});
         fetchProductAttributes().then(setAttributes).catch(() => {});
     }, []);
 

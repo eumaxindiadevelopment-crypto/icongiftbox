@@ -4,7 +4,6 @@ import ShopSidebar from "../../elements/Shop/ShopSidebar";
 import ShopGridCard from "../../elements/Shop/ShopGridCard";
 import { Link, useNavigate, useParams, useSearchParams } from "react-router-dom";
 import SelectBoxOne from "../../elements/Shop/SelectBoxOne";
-import SelectBoxTwo from "../../elements/Shop/SelectBoxTwo";
 import { useState, useEffect, useMemo } from "react";
 import ModalSlider from "../../components/ModalSlider";
 import BasicModalData from "../../components/BasicModalData";

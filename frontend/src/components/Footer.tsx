@@ -1,10 +1,9 @@
 ﻿import { Link } from "react-router-dom";
 import {motion} from 'framer-motion'
 import IMAGES from "../constant/theme";
-import { FooterMenu, OurStores, 
-    UsefulLinks, 
-    WidgetData 
-} 
+import { FooterMenu, OurStores,
+    UsefulLinks
+}
 from "../constant/Alldata";
 // import SubscribeNewsletter from "./SubscribeNewsletter";
 
